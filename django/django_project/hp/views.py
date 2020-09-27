@@ -27,5 +27,5 @@ def home(request):
  
 
 def about(request):
-    return render(request, 'hp/about.html')
+    return render(request, 'hp/about.html', {'title':'About'})
 

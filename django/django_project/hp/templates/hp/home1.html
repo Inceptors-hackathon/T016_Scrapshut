@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+{% extends "hp/base.html" %}
+{% block content %}
     {% for Req in Reqs %}
-        <h1>{{ Req.Loc }}</h1>
-        <p>By {{ Req.NGOName }} on {{ Req.date_posted }}</p>
-        <p>{{ Req.Requirement }}</p>
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">{{ Req.NGOName }}</a>
+                    <small class="text-muted">{{ Req.date_posted }}</small>
+                </div>
+                <h2><a class="article-title" href="#">{{ Req.Loc }}</a></h2>
+                <p class="article-content">{{ Req.Requirement }}</p>
+            </div>
+        </article>
     {% endfor %}
-</body>
-</html>
+{% endblock content %}
