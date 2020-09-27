@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    {% for Req in Reqs %}
+        <h1>{{ Req.Loc }}</h1>
+        <p>By {{ Req.NGOName }} on {{ Req.date_posted }}</p>
+        <p>{{ Req.Requirement }}</p>
+    {% endfor %}
+</body>
+</html>
